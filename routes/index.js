@@ -6,7 +6,7 @@ router.route('/get/:index')
       .get(function(req, res){
           var index = req.params.index;
 
-          var results = db.map(function(subject){
+          var results = db.data.map(function(subject){
               return {
                 title: subject.Title,
                 code: subject.Subject_Code,
