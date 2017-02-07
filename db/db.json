@@ -1,0 +1,241 @@
+{
+	{
+		"Subject_Code": "EN1001",
+		"Title": "Enhancement I",
+		"Semester": "1",
+		"Credits": "1",
+		"Marks": []
+	} ,
+
+	{
+		"Subject_Code": "EN1002",
+		"Title": "Enhancement II",
+		"Semester": "2",
+		"Credits": "1",
+		"Marks": []
+	},
+
+	{
+		"Subject_Code": "IS1001",
+		"Title": "Programming and Problem Solving",
+		"Semester": "1",
+		"Credits": "3",
+		"Marks": []
+	},
+
+	{
+		"Subject_Code": "IS1002",
+		"Title": "Computer Systems",
+		"Semester": "1",
+		"Credits": "3",
+		"Marks": []
+	},
+
+	{
+		"Subject_Code": "IS1003",
+		"Title": "Information Systems Concepts",
+		"Semester": "1",
+		"Credits": "2",
+		"Marks": []
+	},
+
+	{
+		"Subject_Code": "IS1004",
+		"Title": "Applications Laboratory",
+		"Semester": "1",
+		"Credits": "2",
+		"Marks": []
+	},
+
+	{
+		"Subject_Code": "IS1005",
+		"Title": "Introdution to Management",
+		"Semester": "1",
+		"Credits": "2",
+		"Marks": []
+	},
+
+	{
+		"Subject_Code": "IS1006",
+		"Title": "Discrete Mathematics I",
+		"Semester": "1",
+		"Credits": "1",
+		"Marks": []
+	},
+
+	{
+		"Subject_Code": "IS1007",
+		"Title": "Fundamentals of Economics",
+		"Semester": "1",
+		"Credits": "2",
+		"Marks": []
+	},
+
+	{
+		"Subject_Code": "IS1008",
+		"Title": "Financial Accounting",
+		"Semester": "2",
+		"Credits": "3",
+		"Marks": []
+	},
+
+	{
+		"Subject_Code": "IS1009",
+		"Title": "Business Communication",
+		"Semester": "2",
+		"Credits": "2",
+		"Marks": []
+	},
+
+	{
+		"Subject_Code": "IS1010",
+		"Title": "Database Management",
+		"Semester": "2",
+		"Credits": "3",
+		"Marks": []
+	},
+
+	{
+		"Subject_Code": "IS1011",
+		"Title": "System Analysis and Design",
+		"Semester": "2",
+		"Credits": "3",
+		"Marks": []
+	},
+
+	{
+		"Subject_Code": "IS1012",
+		"Title": "Discrete Mathematics II",
+		"Semester": "2",
+		"Credits": "1",
+		"Marks": []
+	},
+
+	{
+		"Subject_Code": "IS1013",
+		"Title": "Organizational Behaviour",
+		"Semester": "2",
+		"Credits": "2",
+		"Marks": []
+	},
+
+	{
+		"Subject_Code": "IS1014",
+		"Title": "Computing and Society",
+		"Semester": "2",
+		"Credits": "1",
+		"Marks": []
+	},
+
+	{
+		"Subject_Code": "EN2001",
+		"Title": "Industrial Practices",
+		"Semester": "1",
+		"Credits": "2",
+		"Marks": []
+	},
+
+	{
+		"Subject_Code": "EN2002",
+		"Title": "Enhancement III",
+		"Semester": "2",
+		"Credits": "1",
+		"Marks": []
+	},
+
+	{
+		"Subject_Code": "IS2001",
+		"Title": "Software Engineering",
+		"Semester": "1",
+		"Credits": "2",
+		"Marks": []
+	},
+
+	{
+		"Subject_Code": "IS2002",
+		"Title": "Group Project I",
+		"Semester": "1",
+		"Credits": "4",
+		"Marks": []
+	},
+
+	{
+		"Subject_Code": "IS2003",
+		"Title": "Marketing",
+		"Semester": "1",
+		"Credits": "2",
+		"Marks": []
+	},
+
+	{
+		"Subject_Code": "IS2004",
+		"Title": "Web Application Development",
+		"Semester": "1",
+		"Credits": "3",
+		"Marks": []
+	},
+
+	{
+		"Subject_Code": "IS2005",
+		"Title": "Business Statistics",
+		"Semester": "1",
+		"Credits": "3",
+		"Marks": []
+	},
+
+	{
+		"Subject_Code": "IS2006",
+		"Title": "Business Process Management",
+		"Semester": "1",
+		"Credits": "2",
+		"Marks": []
+	},
+
+	{
+		"Subject_Code": "IS2007",
+		"Title": "IT Project Management",
+		"Semester": "2",
+		"Credits": "2",
+		"Marks": []
+	},
+
+	{
+		"Subject_Code": "IS2008",
+		"Title": "Information Systems Management",
+		"Semester": "2",
+		"Credits": "2",
+		"Marks": []
+	},
+
+	{
+		"Subject_Code": "IS2009",
+		"Title": "Information Systems Security",
+		"Semester": "2",
+		"Credits": "3",
+		"Marks": []
+	},
+
+	{
+		"Subject_Code": "IS2010",
+		"Title": "IT Procurement Management",
+		"Semester": "2",
+		"Credits": "2",
+		"Marks": []
+	},
+
+	{
+		"Subject_Code": "IS2011",
+		"Title": "Computer Networks",
+		"Semester": "2",
+		"Credits": "3",
+		"Marks": []
+	},
+
+	{
+		"Subject_Code": "IS2012",
+		"Title": "eBusiness Strategy",
+		"Semester": "2",
+		"Credits": "2",
+		"Marks": []
+	}
+}
