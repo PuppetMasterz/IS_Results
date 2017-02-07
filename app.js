@@ -1,6 +1,7 @@
 var express = require('express');
 var favicon = require('serve-favicon');
 var bodyParser = require('body-parser');
+var logger = require('morgan');
 
 var routes = require('./routes/index');
 
@@ -11,6 +12,7 @@ app.set('views',(__dirname + '/views'));
 app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
+app.use(logger('dev'));
 app.use(favicon(__dirname + '/public/images/favicon.ico'));
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing       application/x-www-form-urlencoded
