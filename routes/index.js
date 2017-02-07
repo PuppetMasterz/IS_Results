@@ -1,37 +1,22 @@
 var express = require('express');
 var router = express.Router();
-var db1 = require("../db/1st sem results.json");
-var db2 = require("../db/2nd sem results.json");
+var db = require('../db/db.json');
 
-/* GET home page. */
-router.get('/', function(req, res) {
-  res.render('index');
-});
+router.route('/get/:index')
+      .get(function(req, res){
+          var index = req.params.index;
 
-/*router.get('/admin',function(req,res){
-  res.render('admin');
-});*/
+          var results = db.map(function(subject){
+              return {
+                title: subject.Title,
+                code: subject.Subject_Code,
+                credits: subject.Credits,
+                semester: subject.Semester,
+                grade: subject.Marks[index]
+              }
+          });
 
-router.post('/',function(req,res){
-  var index = req.body.index;
-  console.log("Requesting data : " + index);
-  var results = [];
-
-  db1.forEach(function(data){
-    if(data.Index_num === index){
-      results.push(data);
-    }
-  });
-  db2.forEach(function(data){
-    if(data.Index_num === index){
-      results.push(data);
-    }
-  });
-
-  var jsonObject = JSON.stringify(results);
-
-  res.contentType('application/json');
-  res.send(jsonObject);
-});
+          res.json(results);
+      });
 
 module.exports = router;

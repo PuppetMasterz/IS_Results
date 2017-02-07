@@ -22,6 +22,10 @@ app.use('/public/javascripts/angular.min.js',express.static(__dirname + '/public
 app.use('/public/javascripts/angularApp.js',express.static(__dirname + '/public/javascripts/angularApp.js'));
 app.use('/public/javascripts/adminApp.js',express.static(__dirname + '/public/javascripts/adminApp.js'));
 
-app.use('/', routes);
+app.use('/results', routes);
+
+app.listen(3000, function(){
+	console.log("Listening on 3000...");
+})
 
 module.exports = app;
