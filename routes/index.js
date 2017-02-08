@@ -21,7 +21,7 @@ const GPV = {
 var calculateGPA = function(results){
 
   var gpaResults = results.filter(function(res){
-    return res.grade != undefined && !res.code.startsWith("EN");
+    return res.grade !== undefined && res.code.slice(0,2) !== "EN";
   });
 
   var totalCredits = gpaResults.reduce(function(a, b){
