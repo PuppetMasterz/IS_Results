@@ -2,6 +2,7 @@ var express = require('express');
 var favicon = require('serve-favicon');
 var bodyParser = require('body-parser');
 var logger = require('morgan');
+var cors = require('cors');
 
 var routes = require('./routes/index');
 
@@ -16,6 +17,7 @@ app.use(logger('dev'));
 app.use(favicon(__dirname + '/public/images/favicon.ico'));
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing       application/x-www-form-urlencoded
+app.use(cors());
 
 app.use('/public/stylesheets/style.css',express.static(__dirname + '/public/stylesheets/style.css'));
 app.use('/public/javascripts/angular.min.js',express.static(__dirname + '/public/javascripts/angular.min.js'));
