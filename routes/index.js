@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 var db = require('../db/db.json');
 
+require('string.prototype.startswith');
+
 const GPV = {
   "A+" : 4,
   "A" : 4,
@@ -21,7 +23,7 @@ const GPV = {
 var calculateGPA = function(results){
 
   var gpaResults = results.filter(function(res){
-    return res.grade !== undefined && res.code.slice(0,2) !== "EN";
+    return res.grade !== undefined && !res.code.startsWith("EN");
   });
 
   var totalCredits = gpaResults.reduce(function(a, b){
