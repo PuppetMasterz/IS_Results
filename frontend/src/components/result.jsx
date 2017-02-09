@@ -24,7 +24,8 @@ export default class Results extends React.Component{
 	render(){
 		return(
 			<div>
-			<h4 style={{ textAlign: 'center' }}> { this.props.semester } </h4>
+			<h4 className="center-align" >  {`Year ${this.props.year.charAt(4)} - Semester ${this.props.semester.charAt(3)}`} </h4>
+			<h5 className="center-align"> {`GPA ${this.props.gpa.toFixed(2)}`} </h5>
 
 			<table className="centered">
 				<thead>

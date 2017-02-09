@@ -12,29 +12,6 @@ export default class App extends React.Component{
 		}
 	}
 
-	formatResults(results){
-		let categorized = {};
-
-		results.forEach((result) => {
-			let sem = result.semester;
-			if(sem == undefined){
-				sem = "gpa";
-			}
-
-			if(categorized[sem] == undefined){
-				categorized[sem] = [result];
-			}
-			else{
-				categorized[sem].push(result);
-			}
-		});
-
-		console.log(categorized);
-
-		this.setState({
-			result: categorized
-		})
-	}
 
 	fetchResults(){
 		let index = $('#index_number').val();
@@ -43,22 +20,22 @@ export default class App extends React.Component{
 		fetch(`${apiUrl}/${index}`)
 			.then((response) => response.json())
 			.then((data) => {
-				this.formatResults(data);
+				this.setState({
+					results: data
+				});
 			})
 			.catch((err) => console.log(err));
 	}
 
 	renderResults(){
-		if(this.state.result == undefined){
-			return [];
-		}
-
 		let resultCards = [];
-		let semesters = Object.keys(this.state.result);
+		let results = this.state.results;
 
-		semesters.forEach((sem) => {
-			resultCards.push(<Result semester={ `Semester ${sem}` } results={ this.state.result[sem] }/>)
-		});
+		for(let year in results){
+			for(let sem in results[year]){
+				resultCards.push(<Result year={ year } gpa={ results[year][sem]['gpa'] } semester={ sem } results={ results[year][sem]['result'] }/>)
+			}
+		}
 
 		return resultCards;
 	}
@@ -66,7 +43,7 @@ export default class App extends React.Component{
 	render(){
 		return (
 			<div>
-				<div style={{ textAlign: 'center'}}>
+				<div className="center-align">
 					<h2> IS Results 2013/24 </h2>
 				</div>
 				<Search onClick={ () => this.fetchResults() } />
