@@ -71,7 +71,6 @@ router.route('/get/:index')
             title: subject.Title,
             code: subject.Subject_Code,
             credits: subject.Credits,
-            semester: subject.Semester,
             grade: subject.Marks[index]
           }
         });
