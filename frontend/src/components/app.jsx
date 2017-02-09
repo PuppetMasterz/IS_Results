@@ -33,12 +33,12 @@ export default class App extends React.Component{
 		let results = this.state.results;
 
     if (results) {
-      resultCards.push(<Rank gpa={results['gpa']} rank=''/>);
+      resultCards.push(<Rank gpa={results['gpa']} rank={results['rank']} />);
     }
 
     for(let year in results){
       for(let sem in results[year]){
-        resultCards.push(<Result year={ year } gpa={ results[year][sem]['gpa'] } semester={ sem } results={ results[year][sem]['result'] }/>)
+        resultCards.push(<Result year={ year } gpa={ results[year][sem]['gpa'] } semester={ sem } rank={ results[year][sem]['rank'] } results={ results[year][sem]['result'] }/>)
       }
     }
 

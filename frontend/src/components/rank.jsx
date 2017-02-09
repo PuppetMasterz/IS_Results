@@ -15,7 +15,10 @@ export default class Rank extends React.Component{
 
 		return(
 			<div>
-				<h4 style={blockStyle} >  {`GPA: ${this.props.gpa.toFixed(2)}`} </h4>
+				<div style={blockStyle} >
+						<h4> {`GPA: ${this.props.gpa.toFixed(2)}`} </h4>
+						<h5> { `Rank: ${this.props.rank}` } </h5>
+				</div>
 			</div>
 		)
 	}

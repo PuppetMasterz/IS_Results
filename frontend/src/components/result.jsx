@@ -25,7 +25,7 @@ export default class Results extends React.Component{
 		return(
 			<div>
 			<h4 className="center-align" >  {`Year ${this.props.year.charAt(4)} - Semester ${this.props.semester.charAt(3)}`} </h4>
-			<h5 className="center-align"> {`GPA ${this.props.gpa.toFixed(2)}`} </h5>
+			<h5 className="center-align"> {`GPA ${this.props.gpa.toFixed(2)} | Rank: ${this.props.rank}`} </h5>
 
 			<table className="centered">
 				<thead>
