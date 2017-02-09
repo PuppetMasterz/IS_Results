@@ -20,7 +20,7 @@ const GPV = {
 var getTotalCredits = function(results){
 
   var gpaResults = results.filter(function(res){
-    return res.grade !== undefined && !res.code.startsWith("EN");
+    return !res.code.startsWith("EN");
   });
 
   return gpaResults.reduce(function(a, b){
@@ -37,6 +37,8 @@ var calculateGPA = function(results, totalCredits){
   var totalGpv = gpaResults.reduce(function(a, b){
     return a + (parseInt(b.credits) * GPV[b.grade]);
   }, 0);
+
+  totalGpv = totalGpv || 0;
 
   return totalGpv / totalCredits;
 };
