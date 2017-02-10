@@ -6,8 +6,8 @@ export class Search extends React.Component{
 			<div>
 				<div className="row">
 					<div className="input-field col s8 push-s2">
-						<input placeholder="Index number" id="index_number" type="text"/>
-		          		<label htmlFor="index_number">Index Number</label>
+						<input placeholder="Index number" id="index_number" type="number"/>
+		          		<label id="index_label" htmlFor="index_number">Index Number</label>
 					</div>
 				</div>
 
