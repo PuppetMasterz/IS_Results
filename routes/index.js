@@ -7,7 +7,14 @@ require('string.prototype.startswith');
 router.route('/get/:index')
   .get(function(req, res){
     var index = req.params.index;
-    res.json(db.filter(function(rslt){ return rslt['index'] === index })[0]['results']);
+    var result = db.filter(function(rslt){ return rslt['index'] === index });
+
+    if(result.length == 0){
+    	res.json({ error: 'No results found for the index number' });
+    	return;
+    }
+
+    res.json(result[0]['results']);
   });
 
 module.exports = router;
