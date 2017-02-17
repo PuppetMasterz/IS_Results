@@ -1,7 +1,7 @@
 var db = require('./db/db.json');
 
 const GPV = {
-  "A+" : 4,
+  "A+" : 4.25,
   "A" : 4,
   "A-" : 3.75,
   "B+" : 3.25,
