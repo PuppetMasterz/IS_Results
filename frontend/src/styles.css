@@ -13,3 +13,13 @@ input[type=number]::-webkit-outer-spin-button {
 	 background-color: #f5f2f0;
 	 text-align: center;
 }
+
+.search-btn, .graph-btn {
+	z-index: 0;
+}
+
+.chart, .modal-close, .graph-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

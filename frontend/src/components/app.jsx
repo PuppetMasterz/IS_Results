@@ -2,7 +2,7 @@ import React from 'react';
 import Result from './result.jsx';
 import Rank from './rank.jsx';
 import Error from './error.jsx';
-
+import Graph from './graph.jsx';
 import { Search } from './search.jsx';
 
 const apiUrl = "http://localhost:3000/results/get";
@@ -51,9 +51,10 @@ export default class App extends React.Component{
 			return (<Error />);
 		}
 
-	    if (results) {
-	      resultCards.push(<Rank gpa={results['gpa']} rank={results['rank']} />);
-	    }
+    if (results) {
+      resultCards.push(<Rank gpa={results['gpa']} rank={results['rank']} />);
+      resultCards.push(<Graph results={results}/>);
+    }
 
 	    for(let year in results){
 	      for(let sem in results[year]){

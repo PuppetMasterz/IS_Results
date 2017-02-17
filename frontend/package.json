@@ -10,9 +10,12 @@
   "author": "PuppetMasterz",
   "license": "MIT",
   "dependencies": {
+    "chart.js": "^1.1.1",
     "path": "^0.12.7",
     "react": "^15.4.2",
+    "react-chartjs": "^0.8.0",
     "react-dom": "^15.4.2",
+    "react-modal": "^1.6.5",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.3.0"
   },

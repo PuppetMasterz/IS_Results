@@ -1,9 +1,6 @@
 import React from 'react';
 
 export default class Rank extends React.Component{
-	componentDidMount() {
-		console.log(this.props.gpa);
-	}
 
 	render(){
 		return(

@@ -12,7 +12,7 @@ export class Search extends React.Component{
 				</div>
 
 				<div className="row">
-					<a className="waves-effect waves-light btn col s2 push-s5" onClick={ () => this.props.onClick() }>Fetch</a>
+					<a className="waves-effect waves-light btn col s2 push-s5 search-btn" onClick={ () => this.props.onClick() }>Fetch</a>
 				</div>
 			</div>
 		);
