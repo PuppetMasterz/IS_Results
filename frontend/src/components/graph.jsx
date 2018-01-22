@@ -3,7 +3,7 @@ import Modal from 'react-modal';
 var LineChart = require("react-chartjs").Line;
 
 var data = {
-    labels: ["1st year 1st sem", "1st year 2nd sem", "2nd year 1st sem", "2nd year 2nd sem"],
+    labels: ["1st year 1st sem", "1st year 2nd sem", "2nd year 1st sem", "2nd year 2nd sem", "3rd year 1st sem"],
     datasets: [
         {
             label: "GPA variation",
@@ -31,12 +31,12 @@ var data = {
 };
 
 var chartOptions = {
-        scales: {
-            xAxes: [{
-                display: false
-            }]
-        }
-    }
+  scales: {
+    xAxes: [{
+      display: false
+    }]
+  }
+};
 
 
 export default class Graph extends React.Component{
@@ -45,28 +45,32 @@ export default class Graph extends React.Component{
     super(props);
 
     this.state = {
-      modalIsOpen: false
+      modalIsOpen: false,
+      results: this.props.results,
+      data: data
     };
 
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
 
-    this.results = this.props.results;
-    this.formatData();
   }
 
-  formatData() {
-  	console.log("format data",this.results);
-  	var results = this.results;
+
+  formatData(results) {
+  	console.log("format data",results);
   	for(let year in results){
   	  for(let sem in results[year]){
-  	    data.datasets[0].data.push(results[year][sem]['gpa']);
+  	    this.state.data.datasets[0].data.push(results[year][sem]['gpa']);
   	  }
   	}
   }
 
   openModal() {
     this.setState({modalIsOpen: true});
+		// console.log("props", this.props);
+	  var results = this.props.results;
+	  console.log('results', results);
+	  this.formatData(results);
   }
 
   closeModal() {
@@ -84,7 +88,7 @@ export default class Graph extends React.Component{
         >
 
           <h2 className="center-align" ref="subtitle">GPA Variation</h2>
-          <LineChart className="chart" data={data} options={chartOptions} width="600" height="250"/>
+          <LineChart className="chart" data={this.state.data} options={chartOptions} width="600" height="250"/>
           <br/>
           <button className="waves-effect waves-light btn col s2 push-s5 modal-close" onClick={this.closeModal}>close</button>
         </Modal>

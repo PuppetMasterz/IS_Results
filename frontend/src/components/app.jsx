@@ -54,6 +54,7 @@ export default class App extends React.Component{
     if (results) {
       resultCards.push(<Rank gpa={results['gpa']} rank={results['rank']} />);
       resultCards.push(<Graph results={results}/>);
+      console.log("new result state", results);
     }
 
 	    for(let year in results){
@@ -69,7 +70,7 @@ export default class App extends React.Component{
     return (
       	<div>
 	        <div className="center-align">
-	          <h2> IS Results 2013/24 </h2>
+	          <h2> IS Results 2013/14 </h2>
 	        </div>
 			<Search onClick={ () => this.fetchResults() } />
 			{ this.renderResults() }
