@@ -20,8 +20,9 @@ const GPV = {
 var getTotalCredits = function(results){
 
   var gpaResults = results.filter(function(res){
-    return !res.code.startsWith("EN");
+    return !res.code.startsWith("EN") && res.grade != undefined;
   });
+  console.log("res", gpaResults);
 
   return gpaResults.reduce(function(a, b){
     return a + parseInt(b.credits);
