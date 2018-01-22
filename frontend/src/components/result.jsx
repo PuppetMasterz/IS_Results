@@ -1,13 +1,17 @@
 import React from 'react';
 
 function Result(props){
-	return(
-		<tr>
-			<td> { props.result.code } </td>
-			<td> { props.result.title } </td>
-			<td> { props.result.grade? props.result.grade: 'N/A' } </td>
-		</tr>
-	)
+	if (props.result.grade) {
+		return(
+			<tr>
+				<td> { props.result.code } </td>
+				<td> { props.result.title } </td>
+				<td> { props.result.grade? props.result.grade: 'N/A' } </td>
+			</tr>
+		)
+	} else {
+		return null;
+	}
 }
 
 export default class Results extends React.Component{

@@ -9,6 +9,12 @@ const apiUrl = "http://localhost:3000/results/get";
 
 export default class App extends React.Component{
 	constructor() {
+		let banner = ' |_   _| \ | | |  \/  |  ____|  \/  |/ __ \|  __ \ \   / /  / __ \|  ____| | |  | |  / ____| \ '+
+ '  | | |  \| | | \  / | |__  | \  / | |  | | |__) \ \_/ /  | |  | | |__    | |__| | | (___   \ '+
+'   | | | . ` | | |\/| |  __| | |\/| | |  | |  _  / \   /   | |  | |  __|   |  __  |  \___ \   '+
+'  _| |_| |\  | | |  | | |____| |  | | |__| | | \ \  | |    | |__| | |      | |  | |_ ____) | \ '+
+' |_____|_| \_| |_|  |_|______|_|  |_|\____/|_|  \_\ |_|     \____/|_|      |_|  |_(_)_____(_)\ '+
+'                                                                                             \ '
 		super();
 		this.state = {
 			results: null
@@ -18,7 +24,6 @@ export default class App extends React.Component{
 
 	fetchResults(){
 		let index = $('#index_number').val();
-		console.log(index.length);
 
 		if(index.length != 8 ){
 			this.setState({
@@ -54,7 +59,6 @@ export default class App extends React.Component{
     if (results) {
       resultCards.push(<Rank gpa={results['gpa']} rank={results['rank']} />);
       resultCards.push(<Graph results={results}/>);
-      console.log("new result state", results);
     }
 
 	    for(let year in results){

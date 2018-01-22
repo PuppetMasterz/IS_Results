@@ -57,7 +57,6 @@ export default class Graph extends React.Component{
 
 
   formatData(results) {
-  	console.log("format data",results);
   	for(let year in results){
   	  for(let sem in results[year]){
   	    this.state.data.datasets[0].data.push(results[year][sem]['gpa']);
@@ -67,9 +66,7 @@ export default class Graph extends React.Component{
 
   openModal() {
     this.setState({modalIsOpen: true});
-		// console.log("props", this.props);
 	  var results = this.props.results;
-	  console.log('results', results);
 	  this.formatData(results);
   }
 
