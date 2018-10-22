@@ -98,11 +98,20 @@ var calculateGPAs = function(){
   return results;
 }
 
+fourth_years = ["14020084","14020106","14020122","14020157","14020191","14020203","14020246","14020297","14020343","14020408","14020582","14020602","14020696","14020734","14020752","14020823","14020874","14020912","14020939"]
 var calculateRanks = function(){
-  var gpas = calculateGPAs();
+  var all_gpas = calculateGPAs();
+
+  var gpas = []
+  for(i in all_gpas) {
+    if (fourth_years.indexOf(all_gpas[i]['index']) > -1) {
+      gpas.push(all_gpas[i]);
+    }
+  }
+  // console.log(gpas);
 
   gpas.sort(function(a, b){ return a.results.gpa > b.results.gpa? -1: 1 })
-                         .forEach(function(rslt, i, arr) { rslt['results']['rank'] = i + 1; });
+                         .forEach(function(rslt, i, arr) { console.log(rslt); rslt['results']['rank'] = i + 1; });
 
   for(year in db){
     for(sem in db[year]){
@@ -110,7 +119,7 @@ var calculateRanks = function(){
                              .forEach(function(rslt, i, arr){ rslt['results'][year][sem]['rank'] = i + 1; });
     }
   }
-
+  console.log(gpas);
   return gpas;
 }
 

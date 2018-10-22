@@ -3,7 +3,7 @@ import Modal from 'react-modal';
 var LineChart = require("react-chartjs").Line;
 
 var data = {
-    labels: ["1st year 1st sem", "1st year 2nd sem", "2nd year 1st sem", "2nd year 2nd sem", "3rd year 1st sem"],
+    labels: ["1st year 1st sem", "1st year 2nd sem", "2nd year 1st sem", "2nd year 2nd sem", "3rd year 1st sem", "4th year 1st sem"],
     datasets: [
         {
             label: "GPA variation",
